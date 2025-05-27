@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css'
 import { Home } from './pages/home';
 import { Test } from './pages/test';
@@ -7,6 +7,7 @@ import { Footer } from './components/footer';
 import { NavbarBootstrap } from './components/navbar';
 import { useEffect } from 'react';
 import { setNavigator } from './services/navigateService';
+import { Logout } from './pages/auth/logout';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <NavbarBootstrap />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/test" element={<Test />} />
         <Route path="/landing" element={<Landing />} />
         <Route element={<div style={{ fontSize: "20px" }}>404 Not Found</div>} path="*" />
