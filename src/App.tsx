@@ -4,11 +4,13 @@ import { Home } from './pages/home';
 import { Test } from './pages/test';
 import { Landing } from './pages/landing';
 import { Footer } from './components/footer';
+import { NavbarBootstrap } from './components/navbar';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <NavbarBootstrap />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/test" element={<Test />} />
