@@ -73,26 +73,26 @@ export const NavbarBootstrap: FC = () => {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <AppLogo className="mx-2 mb-4"/>
-                    <Button variant="light" className="d-block">
+                    <Button variant="light" className="d-block bg-white w-full">
                         <p className="mx-0 my-1 lh-1">Manage Users</p>
                     </Button>
-                    <Button variant="light" className="d-block">
+                    <Button variant="light" className="d-block bg-white w-full">
                         <p className="mx-0 my-1 lh-1">Manage Products</p>
                     </Button>
-                    <Button variant="light" className="d-block">
+                    <Button variant="light" className="d-block bg-white w-full">
                         <p className="mx-0 my-1 lh-1">Manage Customers</p>
                     </Button>
                     <hr className="d-lg-none text-secondary my-2" />
-                    <Link className="d-lg-none btn btn-light d-block text-start" to="/">
+                    <Link className="d-lg-none btn btn-light d-block text-start bg-white" to="/" onClick={handleClose}>
                         <p className="mx-0 my-1 lh-1">Home</p>
                     </Link>
-                    <Link className="d-lg-none btn btn-light d-block text-start" to="/landing">
+                    <Link className="d-lg-none btn btn-light d-block text-start bg-white" to="/landing" onClick={handleClose}>
                         <p className="mx-0 my-1 lh-1">Landing</p>
                     </Link>
-                    <Link className="d-lg-none btn btn-light d-block text-start" to="/test">
+                    <Link className="d-lg-none btn btn-light d-block text-start bg-white" to="/test" onClick={handleClose}>
                         <p className="mx-0 my-1 lh-1">Test</p>
                     </Link>
-                    <Link className="d-lg-none btn btn-light d-block text-start" to="/logout">
+                    <Link className="d-lg-none btn btn-light d-block text-start bg-white" to="/logout" onClick={handleClose}>
                         <p className="mx-0 my-1 lh-1 fw-bold">Logout</p>
                     </Link>
                 </Offcanvas.Body>
