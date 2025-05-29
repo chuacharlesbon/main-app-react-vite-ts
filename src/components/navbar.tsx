@@ -10,6 +10,7 @@ import { useState, type FC } from "react";
 import { Flags, Logo } from "../assets";
 import { MdMenu } from "react-icons/md";
 import { Button, Offcanvas } from "react-bootstrap";
+import InstallPWAButton from "./install-pwa-button";
 
 interface Props {
     title?: string;
@@ -95,6 +96,7 @@ export const NavbarBootstrap: FC = () => {
                     <Link className="d-lg-none btn btn-light d-block text-start bg-white" to="/logout" onClick={handleClose}>
                         <p className="mx-0 my-1 lh-1 fw-bold">Logout</p>
                     </Link>
+                    <InstallPWAButton />
                 </Offcanvas.Body>
             </Offcanvas>
         )
