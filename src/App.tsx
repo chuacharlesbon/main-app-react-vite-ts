@@ -8,6 +8,9 @@ import { NavbarBootstrap } from './components/navbar';
 import { useEffect } from 'react';
 import { setNavigator } from './services/navigateService';
 import { Logout } from './pages/auth/logout';
+import { Login } from './pages/auth/login';
+import { ProtectedRoute } from './components/protected';
+import { ManageUser } from './pages/user/manage';
 
 function App() {
 
@@ -22,9 +25,17 @@ function App() {
       <NavbarBootstrap />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/test" element={<Test />} />
         <Route path="/landing" element={<Landing />} />
+
+        {/* Protected Routes */}
+        <Route element={<ProtectedRoute />}>
+          <Route path="/user" element={<ManageUser />} />
+          {/* Add more protected routes here */}
+        </Route>
+
         <Route element={<div style={{ fontSize: "20px" }}>404 Not Found</div>} path="*" />
       </Routes>
       <Footer />

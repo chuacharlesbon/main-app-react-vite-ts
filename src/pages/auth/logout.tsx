@@ -10,7 +10,7 @@ export const Logout: FC = () => {
         if (!hasLoggedOut.current) {
             hasLoggedOut.current = true;
             await logout();
-            navigateTo("/test");
+            navigateTo("/login");
         }
     }
 
