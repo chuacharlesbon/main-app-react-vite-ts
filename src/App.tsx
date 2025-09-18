@@ -11,6 +11,7 @@ import { Logout } from './pages/auth/logout';
 import { Login } from './pages/auth/login';
 import { ProtectedRoute } from './components/protected';
 import { ManageUser } from './pages/user/manage';
+import { Contact } from './pages/contact';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/test" element={<Test />} />
         <Route path="/landing" element={<Landing />} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>

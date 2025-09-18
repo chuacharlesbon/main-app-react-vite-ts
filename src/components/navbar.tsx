@@ -87,7 +87,7 @@ export const NavbarBootstrap: FC = () => {
     return (
         <>
             <LeftDrawer />
-            <Navbar bg="dark" data-bs-theme="dark">
+            <Navbar className="sticky-top" bg="dark" data-bs-theme="dark">
                 <Container className="d-flex flex-row justify-content-between">
                     <Button variant="dark" onClick={handleShow}>
                         <MdMenu className="fs-3 text-white mx-2" />
