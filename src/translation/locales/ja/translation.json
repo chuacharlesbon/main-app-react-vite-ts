@@ -1,4 +1,21 @@
 {
     "welcome": "ようこそ",
-    "logout": "ログアウト"
+    "logout": "ログアウト",
+    "home": "ホーム",
+    "contact": "おといあわせ",
+    "myapp": "アプリ",
+    "portfolioApps": "ポートフォリオアプリ",
+    "moreApps": "そのたのアプリ",
+    "menu": "メニュー",
+    "viewSite": "サイトを見る >>",
+    "portfolioSite": "ポートフォリオサイト",
+    "portfolio2022": "ポートフォリオ | 2022",
+    "portfolio2023": "ポートフォリオ | 2023",
+    "portfolio2024": "ポートフォリオ | 2024",
+    "portfolio2025": "ポートフォリオ | 2025",
+    "portfolio2025Desc": "あたらしい　ポートフォリオ　です。　えいご・日本語　たいおう。　さあ、見てみよう",
+    "wynAppTitle": "Booking App",
+    "wynAppDesc": "A simple booking app for creating appoitment of the selected services.",
+    "ereportAppTitle": "EReport App",
+    "ereportAppDesc": "A simplified reporting app for submitting incidents captured by camera."
 }

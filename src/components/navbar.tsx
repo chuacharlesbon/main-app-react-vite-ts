@@ -38,9 +38,9 @@ export const NavbarBootstrap: FC = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const LanguageSwitcher = () => {
-        const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
 
+    const LanguageSwitcher = () => {
         const changeLanguage = (lng: string) => {
             i18n.changeLanguage(lng);
         };
@@ -69,15 +69,15 @@ export const NavbarBootstrap: FC = () => {
         return (
             <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Menu</Offcanvas.Title>
+                    <Offcanvas.Title>{t('menu')}</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <AppLogo className="mx-2 mb-4 text-dark"/>
                     <Link className="btn btn-light d-block text-start bg-white w-auto" to="/" onClick={handleClose}>
-                        <p className="mx-0 my-1 lh-1">Home</p>
+                        <p className="mx-0 my-1 lh-1">{t('home')}</p>
                     </Link>
                     <Link className="btn btn-light d-block text-start bg-white w-auto" to="/contact" onClick={handleClose}>
-                        <p className="mx-0 my-1 lh-1">Contact</p>
+                        <p className="mx-0 my-1 lh-1">{t('contact')}</p>
                     </Link>
                 </Offcanvas.Body>
             </Offcanvas>
@@ -96,8 +96,8 @@ export const NavbarBootstrap: FC = () => {
                         <AppLogo className="text-white"/>
                     </Navbar.Brand>
                     <Nav className="d-none d-lg-flex ms-auto">
-                        <Nav.Link as={Link} to="/" >Home</Nav.Link>
-                        <Nav.Link as={Link} to="/contact" >Contact</Nav.Link>
+                        <Nav.Link as={Link} className="text-end" style={{width: "120px"}} to="/" >{t('home')}</Nav.Link>
+                        <Nav.Link as={Link} className="text-center" style={{width: "120px"}} to="/contact" >{t('contact')}</Nav.Link>
                     </Nav>
                     <LanguageSwitcher />
                 </Container>
@@ -107,12 +107,13 @@ export const NavbarBootstrap: FC = () => {
 }
 
 export const AppLogo: FC<AppProps> = ({ className }) => {
+    const { t } = useTranslation();
     return (
         <div className={`d-flex flex-row align-items-center justify-content-start ${className}`}>
             <img alt="app-logo" className="rounded-pill me-2" src={Logo.avatar} style={{ width: '30px', height: '30px' }} />
             <div>
                 <p className="m-0 text-start fs-6 fw-medium lh-1">KawaiiCharles</p>
-                <p className="m-0 text-start lh-1" style={{ fontSize: '10px' }}>MyApp</p>
+                <p className="m-0 text-start lh-1" style={{ fontSize: '10px' }}>{t('myapp')}</p>
             </div>
         </div>
     )

@@ -1,4 +1,21 @@
 {
-    "welcome": "Welcome",
-    "logout": "Logout"
+    "welcome": "Welcome!",
+    "logout": "Logout",
+    "home": "Home",
+    "contact": "Contact Us",
+    "myapp": "MyApp",
+    "portfolioApps": "Portfolio Apps",
+    "moreApps": "More Apps",
+    "menu": "Menu",
+    "viewSite": "View the site >>",
+    "portfolioSite": "Go To Portfolio Site",
+    "portfolio2022": "Portfolio | 2022",
+    "portfolio2023": "Portfolio | 2023",
+    "portfolio2024": "Portfolio | 2024",
+    "portfolio2025": "Portfolio | 2025",
+    "portfolio2025Desc": "My new portfolio with English and Japanese translations. Let's go!",
+    "wynAppTitle": "Booking App",
+    "wynAppDesc": "A simple booking app for creating appoitment of the selected services.",
+    "ereportAppTitle": "EReport App",
+    "ereportAppDesc": "A simplified reporting app for submitting incidents captured by camera."
 }
