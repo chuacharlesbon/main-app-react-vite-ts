@@ -1,9 +1,6 @@
 import type { FC } from "react";
-import { useTranslation } from "react-i18next";
 
 export const Contact: FC = () => {
-
-    const { t } = useTranslation();
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
