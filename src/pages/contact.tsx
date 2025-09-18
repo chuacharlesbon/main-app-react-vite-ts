@@ -1,16 +1,22 @@
 import type { FC } from "react";
-import useData from "../zustand/useData";
+import { useTranslation } from "react-i18next";
 
-interface Props {
-    title?: string;
-    data?: any; // optional prop
+export const Contact: FC = () => {
+
+    const { t } = useTranslation();
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+    }
+
+    return <div className="bg-grey m-0">
+        <section className="px-4 py-8 min-vh-100 d-flex flex-column justify-content-center align-items-center">
+            <form className="col col-12 col-md-6 col-lg-4 col-xl-3" onSubmit={handleSubmit}>
+                <input type="text" className="form-control my-1" placeholder="Name" aria-label="Name" />
+                <input type="email" className="form-control my-1" placeholder="Email" aria-label="Email" />
+                <input type="text" className="form-control my-1" placeholder="Message" aria-label="Message" />
+                <button className="btn btn-secondary text-white w-100">SUBMIT</button>
+            </form>
+        </section>
+    </div>
 }
-
-export const Contact: FC<Props> = ({ title, data }) => {
-    const dataState = useData();
-    const dataValue = dataState.data;
-    return <>
-        <div>Contact Page: {title ?? "N/A"}! {data ?? "no data"} {dataValue} <button onClick={dataState.increaseData}>Increase Data</button></div>
-        <div style={{ minHeight: "100dvh" }} />
-    </>;
-};
